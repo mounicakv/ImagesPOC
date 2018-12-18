@@ -1,6 +1,7 @@
 package com.capgemini.imagespoc.helper;
 
 import java.io.*;
+import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
@@ -25,7 +26,7 @@ public class ImageConverter {
     * @return
     * @throws IOException
     */
-   private byte[] zipFiles(File directory, String[] files) throws IOException {
+   public byte[] zipFiles(File directory, List<String> files) throws IOException {
        ByteArrayOutputStream baos = new ByteArrayOutputStream();
        ZipOutputStream zos = new ZipOutputStream(baos);
        byte bytes[] = new byte[2048];

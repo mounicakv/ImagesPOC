@@ -11,7 +11,9 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.zip.ZipEntry;
@@ -19,6 +21,7 @@ import java.util.zip.ZipOutputStream;
 
 import javax.imageio.ImageIO;
 
+import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -64,8 +67,7 @@ public class ImageServiceImpl {
 		  = restTemplate.getForObject(resourceURL, ImageList.class, urlVariables);
 		//String responseString = response.getBody();
 		if(null != images && !CollectionUtils.isEmpty(images.getImages())) {
-			logger.info("Image count based on keyword is" + images.getImages().size());
-			
+	logger.info("Image count based on keyword is" + images.getImages().size());	
 			//Iterate these objects using java8 streams
 			//Call the url present in url attribute 
 			images.getImages().stream().forEach(img -> {
@@ -76,6 +78,18 @@ public class ImageServiceImpl {
 					e.printStackTrace();
 				}
 			});
+
+			String[] extensions = {"jpg"};
+			List<String> fileNames = new ArrayList<String>();
+			File directory = new File("D://artifacts");
+			Iterator itr = FileUtils.iterateFiles(directory, extensions, true);
+			while(itr.hasNext()) {
+				File f = (File)itr.next();
+				fileNames.add(f.getName());
+			}
+			byte[] outputFromDirectory = imageConverter.zipFiles(directory,fileNames);
+			FileUtils.cleanDirectory(directory);
+			return outputFromDirectory;
 		}
 		
 		else {
@@ -93,9 +107,8 @@ public class ImageServiceImpl {
 		logger.info("Id of image :"+id);
 		URL url = new URL(imageUrl);
 		BufferedImage img = ImageIO.read(url);
-
-		File file = new File("File"+id+".jpg");
-		file.getParentFile().mkdirs();
+		File file = new File("D://artifacts/" + "File_"+id+".jpg");
+		//file.getParentFile().mkdirs();
 		ImageIO.write(img, "jpg", file);
 		
 		/*String destinationFile=null;
@@ -111,9 +124,7 @@ public class ImageServiceImpl {
 		      is.close();
 		    os.close();
 		*/
-			logger.info("Image file written to stream...");
-
-		  
+		logger.info("Image file written to stream...");
 		}
 	
 	/**
