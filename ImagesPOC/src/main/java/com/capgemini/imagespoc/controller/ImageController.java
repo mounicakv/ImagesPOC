@@ -11,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,7 +23,7 @@ import com.capgemini.imagespoc.service.ImageServiceImpl ;
 /**
  * Handles requests for the Images service.
  */
-@RestController
+@RestController /*(value="/images")*/
 public class ImageController extends BaseController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(ImageController.class);
@@ -54,5 +55,23 @@ public class ImageController extends BaseController {
         sos.write(images);
         sos.flush();
 	}
+	
+	@RequestMapping(value = "/images/retrieveCountableImagesFromInternet/count/{countID}", method = RequestMethod.GET, produces="application/zip")
+	public void getRequiredImagesFromInternet(@RequestParam String keyword,@PathVariable int countID, HttpServletResponse response) throws Exception{
+		logger.info("getAllImagesFromInternet");
+		byte[] images = null;
+		logger.info("Keyword passed in input " + keyword);
+		logger.info("Count of images to be retrieved :"+ countID);
+		
+		images =  imageService.getRequiredImagesFromInternet(keyword,countID);
+		ServletOutputStream sos = response.getOutputStream();
+        response.setContentType("application/zip");
+        response.setHeader("Content-Disposition", "attachment; filename=DATA.ZIP");
+        sos.write(images);
+        sos.flush();
+	}
+
+	
+	
 }
 	
