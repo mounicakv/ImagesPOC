@@ -3,6 +3,7 @@ package com.capgemini.imagespoc.controller;
 
 
 import java.io.IOException;
+import java.util.Calendar;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
@@ -45,15 +46,49 @@ public class ImageController extends BaseController {
 	
 	@RequestMapping(value = "/images/retrieveImagesFromInternet", method = RequestMethod.GET, produces="application/zip")
 	public void getAllImagesFromInternet(@RequestParam String keyword, HttpServletResponse response) throws Exception{
+		long entryTime = Calendar.getInstance().getTimeInMillis();
 		logger.info("getAllImagesFromInternet");
 		byte[] images = null;
 		logger.info("Keyword passed in input" + keyword);
 		images =  imageService.getImagesFromInternet(keyword);
 		ServletOutputStream sos = response.getOutputStream();
-        response.setContentType("application/zip");
+		if(null != images) {
+	    response.setContentType("application/zip");
         response.setHeader("Content-Disposition", "attachment; filename=DATA.ZIP");
         sos.write(images);
         sos.flush();
+		}else {
+			response.setContentType("application/octet-stream");
+			byte[] b = {'n', 'o', 'i','m', 'a', 'g','e', 's'};
+		    sos.write(b);
+	        sos.flush();
+		}
+        long totalTime = Calendar.getInstance().getTimeInMillis() - entryTime;
+        logger.info("Total time taken to retrieve images from internet, process and send it back to user is " + totalTime + " ms");
+	}
+	
+	
+	@RequestMapping(value = "/images/retrieveImagesfromInternetOptimized", method = RequestMethod.GET, produces="application/zip")
+	public void getAllImagesFromInternetOptimized(@RequestParam String keyword, HttpServletResponse response) throws Exception{
+		long entryTime = Calendar.getInstance().getTimeInMillis();
+		logger.info("getAllImagesFromInternetOptimized");
+		byte[] images = null;
+		logger.info("Keyword passed in input" + keyword);
+		images =  imageService.getImagesFromInternetOptimized(keyword);
+		ServletOutputStream sos = response.getOutputStream();
+		if(null != images) {
+	    response.setContentType("application/zip");
+        response.setHeader("Content-Disposition", "attachment; filename=DATA.ZIP");
+        sos.write(images);
+        sos.flush();
+		}else {
+			response.setContentType("application/octet-stream");
+			byte[] b = {'n', 'o', 'i','m', 'a', 'g','e', 's'};
+		    sos.write(b);
+	        sos.flush();
+		}
+        long totalTime = Calendar.getInstance().getTimeInMillis() - entryTime;
+        logger.info("Total time taken to retrieve images from internet in an optimized way, process and send it back to user is" + totalTime + " ms");
 	}
 	
 	@RequestMapping(value = "/images/retrieveCountableImagesFromInternet/count/{countID}", method = RequestMethod.GET, produces="application/zip")
