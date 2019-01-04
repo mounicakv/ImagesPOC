@@ -36,7 +36,7 @@ public class ImageServiceImpl {
 
 	private static final Logger logger = LoggerFactory.getLogger(ImageController.class);
 
-	private static final Integer threadCount = 5;
+	// private static final Integer threadCount = 5;
 
 	@Autowired
 	ImageConverter imageConverter;
@@ -52,28 +52,7 @@ public class ImageServiceImpl {
 		return output;
 	}
 
-	private ImageList retrieveImageFromSplash(String keyword) {
-		RestTemplate restTemplate = new RestTemplate();
-		String resourceURL = "http://www.splashbase.co/api/v1/images/search?query={queryparam}";
-		Map<String, String> urlVariables = new HashMap<String, String>();
-		urlVariables.put("queryparam", keyword);
-		return restTemplate.getForObject(resourceURL, ImageList.class, urlVariables);
-	}
-
-	private byte[] zipFiles() throws IOException {
-		String[] extensions = { "jpg" };
-		List<String> fileNames = new ArrayList<String>();
-		File directory = new File("D://artifacts");
-		Iterator itr = FileUtils.iterateFiles(directory, extensions, true);
-		while (itr.hasNext()) {
-			File f = (File) itr.next();
-			fileNames.add(f.getName());
-		}
-		byte[] outputFromDirectory = imageConverter.zipFiles(directory, fileNames);
-		FileUtils.cleanDirectory(directory);
-		return outputFromDirectory;
-	}
-
+	
 	public byte[] getImagesFromInternet(String keyword) throws IOException, MalformedURLException {
 		ImageList images = retrieveImageFromSplash(keyword);
 		if (null != images && !CollectionUtils.isEmpty(images.getImages())) {
@@ -83,7 +62,7 @@ public class ImageServiceImpl {
 			images.getImages().stream().forEach(img -> {
 				invokeImage(img.getUrl(), img.getId());
 			});
-			byte[] outputFromDirectory = zipFiles();
+			byte[] outputFromDirectory = imageConverter.zipFiles();
 			return outputFromDirectory;
 		} else {
 			logger.info("No images available");
@@ -98,7 +77,7 @@ public class ImageServiceImpl {
 		if (null != images && !CollectionUtils.isEmpty(images.getImages())) {
 			int count = images.getImages().size();
 			logger.info("Image count based on keyword is" + count);
-			//int threadCount = Runtime.getRuntime().availableProcessors() + 1;
+			// int threadCount = Runtime.getRuntime().availableProcessors() + 1;
 			logger.info("Number of Processors : " + Runtime.getRuntime().availableProcessors());
 			int threadCount = Runtime.getRuntime().availableProcessors();
 			ExecutorService es = Executors.newFixedThreadPool(threadCount);
@@ -116,23 +95,49 @@ public class ImageServiceImpl {
 			}
 			for (Future<Map<Integer, Integer>> f : futures) {
 				f.get();
-//				f.get().keySet().forEach(key -> {
-//					try {
-//						logger.info("Key: " + key + ": retrieval status is " + f.get().get(key));
-//					} catch (InterruptedException e) {
-//						e.printStackTrace();
-//					} catch (ExecutionException e) {
-//						e.printStackTrace();
-//					}
-//				});
 			}
 			logger.info("all items processed");
-			byte[] outputFromDirectory = zipFiles();
+			byte[] outputFromDirectory = imageConverter.zipFiles();
 			return outputFromDirectory;
 		} else {
 			logger.info("No images available");
 		}
 		return null;
+	}
+
+	public byte[] getRequiredImagesFromInternet(String keyword, int count) throws IOException, MalformedURLException {
+		ImageList images = retrieveImageFromSplash(keyword);
+		if (null != images && !CollectionUtils.isEmpty(images.getImages())) {
+
+			logger.info("Total images available :" + images.getImages().size());
+			logger.info("Required images by user  :" + count);
+
+			if (images.getImages().size() <= count) {
+				logger.info("Images are available but lesser than required");
+				images.getImages().stream().forEach(img -> {
+					invokeImage(img.getUrl(), img.getId());
+				});
+
+			} else {
+				logger.info("More than required images are loaded...needs processing");
+				images.getImages().stream().limit(count).forEach(img -> {
+					invokeImage(img.getUrl(), img.getId());
+				});
+			}
+			byte[] outputFromDirectory = imageConverter.zipFiles();
+			return outputFromDirectory;
+		} else {
+			logger.info("No images available");
+		}
+		return null;
+	}
+	
+	public ImageList retrieveImageFromSplash(String keyword) {
+		RestTemplate restTemplate = new RestTemplate();
+		String resourceURL = "http://www.splashbase.co/api/v1/images/search?query={queryparam}";
+		Map<String, String> urlVariables = new HashMap<String, String>();
+		urlVariables.put("queryparam", keyword);
+		return restTemplate.getForObject(resourceURL, ImageList.class, urlVariables);
 	}
 
 	public Integer invokeImage(String imageUrl, int id) {
@@ -152,42 +157,5 @@ public class ImageServiceImpl {
 			return 0;
 		}
 	}
-
-	public byte[] getRequiredImagesFromInternet(String keyword, int count) throws IOException, MalformedURLException {
-		RestTemplate restTemplate = new RestTemplate();
-		String resourceURL = "http://www.splashbase.co/api/v1/images/search?query={queryparam}";
-		Map<String, String> urlVariables = new HashMap<String, String>();
-		urlVariables.put("queryparam", keyword);
-		ImageList images = restTemplate.getForObject(resourceURL, ImageList.class, urlVariables);
-		// String responseString = response.getBody();
-		if (null != images && !CollectionUtils.isEmpty(images.getImages())) {
-			logger.info("Image count based on keyword is" + images.getImages().size());
-			logger.info("Required images by user  :" + count);
-			// List<Image> ImagesBasedOnCount = new ArrayList<>();
-			if (images.getImages().size() <= count) {
-				logger.info("More than required images are loaded...needs processing");
-				images.getImages().stream().forEach(img -> {
-					invokeImage(img.getUrl(), img.getId());
-				});
-			} else {
-				logger.info("Total images available :" + images.getImages().size());
-				logger.info("Images are available but lesser than required");
-				images.getImages().stream().limit(count).forEach(img -> {
-					invokeImage(img.getUrl(), img.getId());
-				});
-			}
-		}
-
-		String[] extensions = { "jpg" };
-		List<String> fileNames = new ArrayList<String>();
-		File directory = new File("D://artifacts");
-		Iterator itr = FileUtils.iterateFiles(directory, extensions, true);
-		while (itr.hasNext()) {
-			File f = (File) itr.next();
-			fileNames.add(f.getName());
-		}
-		byte[] outputFromDirectory = imageConverter.zipFiles(directory, fileNames);
-		FileUtils.cleanDirectory(directory);
-		return outputFromDirectory;
-	}
+	
 }

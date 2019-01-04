@@ -1,6 +1,8 @@
 package com.capgemini.imagespoc.helper;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
@@ -11,12 +13,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ImageConverter {
-   /**
-    * 	
-    * @return
-    * @throws Exception
-    */
-   public byte[] getImageInBytes(File file) throws IOException {
+	
+  /* public byte[] getImageInBytes(File file) throws IOException {
 	 	return FileUtils.readFileToByteArray(file);
    }
    
@@ -46,6 +44,20 @@ public class ImageConverter {
        baos.close();
        return baos.toByteArray();
    }
+   
+   public byte[] zipFiles() throws IOException {
+		String[] extensions = { "jpg" };
+		List<String> fileNames = new ArrayList<String>();
+		File directory = new File("D://artifacts");
+		Iterator itr = FileUtils.iterateFiles(directory, extensions, true);
+		while (itr.hasNext()) {
+			File f = (File) itr.next();
+			fileNames.add(f.getName());
+		}
+		byte[] outputFromDirectory = zipFiles(directory, fileNames);
+		FileUtils.cleanDirectory(directory);
+		return outputFromDirectory;
+	}
    
    /**
     * Zip all the files present in particular directory
