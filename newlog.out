@@ -1,0 +1,443 @@
+Root WebApplicationContext: initialization started
+Refreshing Root WebApplicationContext: startup date [Mon Jul 15 16:50:38 IST 2019]; root of context hierarchy
+Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
+Unable to locate ThemeSource with name 'themeSource': using default [org.springframework.ui.context.support.ResourceBundleThemeSource@6bf03e4e]
+Looking up JNDI object with name [java:comp/env/spring.liveBeansView.mbeanDomain]
+Converted JNDI name [java:comp/env/spring.liveBeansView.mbeanDomain] not found - trying original name [spring.liveBeansView.mbeanDomain]. javax.naming.NameNotFoundException: Name [spring.liveBeansView.mbeanDomain] is not bound in this Context. Unable to find [spring.liveBeansView.mbeanDomain].
+Looking up JNDI object with name [spring.liveBeansView.mbeanDomain]
+JNDI lookup for name [spring.liveBeansView.mbeanDomain] threw NamingException with message: Name [spring.liveBeansView.mbeanDomain] is not bound in this Context. Unable to find [spring.liveBeansView.mbeanDomain].. Returning null.
+Root WebApplicationContext: initialization completed in 300 ms
+FrameworkServlet 'appServlet': initialization started
+Looking up JNDI object with name [java:comp/env/spring.profiles.active]
+Converted JNDI name [java:comp/env/spring.profiles.active] not found - trying original name [spring.profiles.active]. javax.naming.NameNotFoundException: Name [spring.profiles.active] is not bound in this Context. Unable to find [spring.profiles.active].
+Looking up JNDI object with name [spring.profiles.active]
+JNDI lookup for name [spring.profiles.active] threw NamingException with message: Name [spring.profiles.active] is not bound in this Context. Unable to find [spring.profiles.active].. Returning null.
+Looking up JNDI object with name [java:comp/env/spring.profiles.default]
+Converted JNDI name [java:comp/env/spring.profiles.default] not found - trying original name [spring.profiles.default]. javax.naming.NameNotFoundException: Name [spring.profiles.default] is not bound in this Context. Unable to find [spring.profiles.default].
+Looking up JNDI object with name [spring.profiles.default]
+JNDI lookup for name [spring.profiles.default] threw NamingException with message: Name [spring.profiles.default] is not bound in this Context. Unable to find [spring.profiles.default].. Returning null.
+Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Mon Jul 15 16:50:38 IST 2019]; parent: Root WebApplicationContext
+Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]
+Overriding bean definition for bean 'mvcPathMatcher' with a different definition: replacing [Root bean: class [org.springframework.util.AntPathMatcher]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=mvcPathMatcher; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]]
+Overriding bean definition for bean 'mvcUrlPathHelper' with a different definition: replacing [Root bean: class [org.springframework.web.util.UrlPathHelper]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=mvcUrlPathHelper; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]]
+Overriding bean definition for bean 'mvcContentNegotiationManager' with a different definition: replacing [Root bean: class [org.springframework.web.accept.ContentNegotiationManagerFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=mvcContentNegotiationManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]]
+Overriding bean definition for bean 'mvcResourceUrlProvider' with a different definition: replacing [Root bean: class [org.springframework.web.servlet.resource.ResourceUrlProvider]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=mvcResourceUrlProvider; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]]
+Skipping bean definition for [BeanMethod:name=mvcUriComponentsContributor,declaringClass=org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport]: a definition for bean 'mvcUriComponentsContributor' already exists. This top-level bean definition is considered as an override.
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+Unable to locate ThemeSource with name 'themeSource': using default [org.springframework.ui.context.support.DelegatingThemeSource@384076b7]
+Mapped "{[/images/retrieveImagesfromInternetOptimized],methods=[GET],produces=[application/zip]}" onto public void com.capgemini.imagespoc.controller.ImageController.getAllImagesFromInternetOptimized(java.lang.String,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+Mapped "{[/images/retrieveImagesFromInternet],methods=[GET],produces=[application/zip]}" onto public void com.capgemini.imagespoc.controller.ImageController.getAllImagesFromInternet(java.lang.String,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+Mapped "{[/images/retrieveCountableImagesFromInternet/count/{countID}],methods=[GET],produces=[application/zip]}" onto public void com.capgemini.imagespoc.controller.ImageController.getRequiredImagesFromInternet(java.lang.String,int,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+Mapped "{[/images/retrieveImagesFromResource],methods=[GET],produces=[application/zip]}" onto public void com.capgemini.imagespoc.controller.ImageController.getAllImages(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@62a74e67
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@645c0b35
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@11fd6410
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@73622cf0
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Mon Jul 15 16:50:38 IST 2019]; parent: Root WebApplicationContext
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Mon Jul 15 16:50:38 IST 2019]; parent: Root WebApplicationContext
+Detected @ExceptionHandler methods in globalExceptionHandler
+Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@b58582
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@41f132de
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@45a5edd7
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@5d047bc
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@272c4c90
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@c44b927
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@32a36c1
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@38fadff4
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@5802bc7
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@668ac682
+Mapped "{[/images/retrieveImagesfromInternetOptimized],methods=[GET],produces=[application/zip]}" onto public void com.capgemini.imagespoc.controller.ImageController.getAllImagesFromInternetOptimized(java.lang.String,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+Mapped "{[/images/retrieveImagesFromInternet],methods=[GET],produces=[application/zip]}" onto public void com.capgemini.imagespoc.controller.ImageController.getAllImagesFromInternet(java.lang.String,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+Mapped "{[/images/retrieveCountableImagesFromInternet/count/{countID}],methods=[GET],produces=[application/zip]}" onto public void com.capgemini.imagespoc.controller.ImageController.getRequiredImagesFromInternet(java.lang.String,int,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+Mapped "{[/images/retrieveImagesFromResource],methods=[GET],produces=[application/zip]}" onto public void com.capgemini.imagespoc.controller.ImageController.getAllImages(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+Looking up JNDI object with name [java:comp/env/springfox.documentation.swagger.v1.path]
+Converted JNDI name [java:comp/env/springfox.documentation.swagger.v1.path] not found - trying original name [springfox.documentation.swagger.v1.path]. javax.naming.NameNotFoundException: Name [springfox.documentation.swagger.v1.path] is not bound in this Context. Unable to find [springfox.documentation.swagger.v1.path].
+Looking up JNDI object with name [springfox.documentation.swagger.v1.path]
+JNDI lookup for name [springfox.documentation.swagger.v1.path] threw NamingException with message: Name [springfox.documentation.swagger.v1.path] is not bound in this Context. Unable to find [springfox.documentation.swagger.v1.path].. Returning null.
+Looking up JNDI object with name [java:comp/env/springfox.documentation.swagger.v2.path]
+Converted JNDI name [java:comp/env/springfox.documentation.swagger.v2.path] not found - trying original name [springfox.documentation.swagger.v2.path]. javax.naming.NameNotFoundException: Name [springfox.documentation.swagger.v2.path] is not bound in this Context. Unable to find [springfox.documentation.swagger.v2.path].
+Looking up JNDI object with name [springfox.documentation.swagger.v2.path]
+JNDI lookup for name [springfox.documentation.swagger.v2.path] threw NamingException with message: Name [springfox.documentation.swagger.v2.path] is not bound in this Context. Unable to find [springfox.documentation.swagger.v2.path].. Returning null.
+Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Mon Jul 15 16:50:38 IST 2019]; parent: Root WebApplicationContext
+Detected @ExceptionHandler methods in globalExceptionHandler
+Looking up JNDI object with name [java:comp/env/springfox.documentation.swagger.v2.host]
+Converted JNDI name [java:comp/env/springfox.documentation.swagger.v2.host] not found - trying original name [springfox.documentation.swagger.v2.host]. javax.naming.NameNotFoundException: Name [springfox.documentation.swagger.v2.host] is not bound in this Context. Unable to find [springfox.documentation.swagger.v2.host].
+Looking up JNDI object with name [springfox.documentation.swagger.v2.host]
+JNDI lookup for name [springfox.documentation.swagger.v2.host] threw NamingException with message: Name [springfox.documentation.swagger.v2.host] is not bound in this Context. Unable to find [springfox.documentation.swagger.v2.host].. Returning null.
+initialising the handler methods
+Looking up JNDI object with name [java:comp/env/springfox.documentation.swagger.v2.path]
+Converted JNDI name [java:comp/env/springfox.documentation.swagger.v2.path] not found - trying original name [springfox.documentation.swagger.v2.path]. javax.naming.NameNotFoundException: Name [springfox.documentation.swagger.v2.path] is not bound in this Context. Unable to find [springfox.documentation.swagger.v2.path].
+Looking up JNDI object with name [springfox.documentation.swagger.v2.path]
+JNDI lookup for name [springfox.documentation.swagger.v2.path] threw NamingException with message: Name [springfox.documentation.swagger.v2.path] is not bound in this Context. Unable to find [springfox.documentation.swagger.v2.path].. Returning null.
+Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+Looking up JNDI object with name [java:comp/env/springfox.documentation.auto-startup]
+Converted JNDI name [java:comp/env/springfox.documentation.auto-startup] not found - trying original name [springfox.documentation.auto-startup]. javax.naming.NameNotFoundException: Name [springfox.documentation.auto-startup] is not bound in this Context. Unable to find [springfox.documentation.auto-startup].
+Looking up JNDI object with name [springfox.documentation.auto-startup]
+JNDI lookup for name [springfox.documentation.auto-startup] threw NamingException with message: Name [springfox.documentation.auto-startup] is not bound in this Context. Unable to find [springfox.documentation.auto-startup].. Returning null.
+Starting beans in phase 2147483647
+Looking up JNDI object with name [java:comp/env/springfox.documentation.auto-startup]
+Converted JNDI name [java:comp/env/springfox.documentation.auto-startup] not found - trying original name [springfox.documentation.auto-startup]. javax.naming.NameNotFoundException: Name [springfox.documentation.auto-startup] is not bound in this Context. Unable to find [springfox.documentation.auto-startup].
+Looking up JNDI object with name [springfox.documentation.auto-startup]
+JNDI lookup for name [springfox.documentation.auto-startup] threw NamingException with message: Name [springfox.documentation.auto-startup] is not bound in this Context. Unable to find [springfox.documentation.auto-startup].. Returning null.
+Context refreshed
+Found 1 custom documentation plugin(s)
+Total number of request handlers 14
+Adding key: [/images/retrieveCountableImagesFromInternet/count/{countID}], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveCountableImagesFromInternet/count/{countID}], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}}
+Adding key: [/images/retrieveCountableImagesFromInternet/count/{countID}], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveCountableImagesFromInternet/count/{countID}], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}}
+Adding key: [/images/retrieveImagesFromInternet], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveImagesFromInternet], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}}
+Adding key: [/images/retrieveImagesFromInternet], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveImagesFromInternet], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}}
+Adding key: [/images/retrieveImagesFromResource], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveImagesFromResource], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}}
+Adding key: [/images/retrieveImagesFromResource], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveImagesFromResource], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}}
+Adding key: [/images/retrieveImagesfromInternetOptimized], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveImagesfromInternetOptimized], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}}
+Adding key: [/images/retrieveImagesfromInternetOptimized], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveImagesfromInternetOptimized], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}}
+Adding key: [/swagger-resources/configuration/security], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/swagger-resources/configuration/security], supportedMethods=[], supportedMediaTypes=[], producibleMediaTypes=[]}}
+Adding key: [/swagger-resources/configuration/security], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/swagger-resources/configuration/security], supportedMethods=[], supportedMediaTypes=[], producibleMediaTypes=[]}}
+Adding key: [/swagger-resources/configuration/ui], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/swagger-resources/configuration/ui], supportedMethods=[], supportedMediaTypes=[], producibleMediaTypes=[]}}
+Adding key: [/swagger-resources/configuration/ui], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/swagger-resources/configuration/ui], supportedMethods=[], supportedMediaTypes=[], producibleMediaTypes=[]}}
+Adding key: [/swagger-resources], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/swagger-resources], supportedMethods=[], supportedMediaTypes=[], producibleMediaTypes=[]}}
+Adding key: [/swagger-resources], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/swagger-resources], supportedMethods=[], supportedMediaTypes=[], producibleMediaTypes=[]}}
+Combining WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveCountableImagesFromInternet/count/{countID}], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}} and WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveCountableImagesFromInternet/count/{countID}], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}}
+Combining WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveImagesFromInternet], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}} and WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveImagesFromInternet], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}}
+Combining WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveImagesFromResource], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}} and WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveImagesFromResource], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}}
+Combining WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveImagesfromInternetOptimized], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}} and WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveImagesfromInternetOptimized], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}}
+Combined number of request handlers 10
+Scanning for api listing references
+Adding return parameter of type V
+Reading parameters models for handlerMethod |getAllImages|
+Finished reading parameters models for handlerMethod |getAllImages|
+Reading parameters models for handlerMethod |getAllImages|
+Skipping model of type V as its either a container type, map, enum or base type, or its already been handled
+Did not find any parameter models for void
+Setting spring response class to: null
+Authorization count 0 for method getAllImages
+Adding return parameter of type V
+Reading parameters models for handlerMethod |getAllImagesFromInternet|
+Finished reading parameters models for handlerMethod |getAllImagesFromInternet|
+Reading parameters models for handlerMethod |getAllImagesFromInternet|
+Did not find any parameter models for void
+Setting spring response class to: null
+Authorization count 0 for method getAllImagesFromInternet
+Adding return parameter of type V
+Reading parameters models for handlerMethod |getAllImagesFromInternetOptimized|
+Finished reading parameters models for handlerMethod |getAllImagesFromInternetOptimized|
+Reading parameters models for handlerMethod |getAllImagesFromInternetOptimized|
+Did not find any parameter models for void
+Setting spring response class to: null
+Authorization count 0 for method getAllImagesFromInternetOptimized
+Adding return parameter of type V
+Reading parameters models for handlerMethod |getRequiredImagesFromInternet|
+Finished reading parameters models for handlerMethod |getRequiredImagesFromInternet|
+Reading parameters models for handlerMethod |getRequiredImagesFromInternet|
+Did not find any parameter models for void
+Setting spring response class to: null
+Authorization count 0 for method getRequiredImagesFromInternet
+Looking up JNDI object with name [java:comp/env/spring.liveBeansView.mbeanDomain]
+Converted JNDI name [java:comp/env/spring.liveBeansView.mbeanDomain] not found - trying original name [spring.liveBeansView.mbeanDomain]. javax.naming.NameNotFoundException: Name [spring.liveBeansView.mbeanDomain] is not bound in this Context. Unable to find [spring.liveBeansView.mbeanDomain].
+Looking up JNDI object with name [spring.liveBeansView.mbeanDomain]
+JNDI lookup for name [spring.liveBeansView.mbeanDomain] threw NamingException with message: Name [spring.liveBeansView.mbeanDomain] is not bound in this Context. Unable to find [spring.liveBeansView.mbeanDomain].. Returning null.
+FrameworkServlet 'appServlet': initialization completed in 4667 ms
+Looking up handler method for path /images/retrieveImagesfromInternetOptimized
+looking up handler for path: /images/retrieveImagesfromInternetOptimized
+Did not find handler method for [/images/retrieveImagesfromInternetOptimized]
+getAllImagesFromInternetOptimized
+Keyword passed in inputlaptop
+Image count based on keyword is16
+Number of Processors : 4
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mx3tpto69r1st5lhmo1_1280.jpg
+Id of image :183
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mnh0n9pHJW1st5lhmo1_1280.jpg
+Id of image :1
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mnh2m1hnS81st5lhmo1_1280.jpg
+Id of image :10
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mnh1jdFvHR1st5lhmo1_1280.jpg
+Id of image :6
+Image file written to stream...
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mnh1uhYnog1st5lhmo1_1280.jpg
+Id of image :7
+Image file written to stream...
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mopqkkwK2M1st5lhmo1_1280.jpg
+Id of image :30
+Image file written to stream...
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mnh121HEWa1st5lhmo1_1280.jpg
+Id of image :3
+Image file written to stream...
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mpp6tjdFhf1st5lhmo1_1280.jpg
+Id of image :41
+Image file written to stream...
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_myebwtELvb1st5lhmo1_1280.jpg
+Id of image :205
+Image file written to stream...
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mtw7mhZsCe1st5lhmo1_1280.jpg
+Id of image :128
+Image file written to stream...
+Image file written to stream...
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mnh25vNOvI1st5lhmo1_1280.jpg
+Id of image :8
+Image file written to stream...
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mnh17lfd9R1st5lhmo1_1280.jpg
+Id of image :4
+Image file written to stream...
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mnh29fxz111st5lhmo1_1280.jpg
+Id of image :9
+Image file written to stream...
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_n7fgokF2Ul1st5lhmo1_1280.jpg
+Id of image :386
+Image file written to stream...
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mnh1d7s3UD1st5lhmo1_1280.jpg
+Id of image :5
+Image file written to stream...
+Image file written to stream...
+Image file written to stream...
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/jaymantri/regular/tumblr_n98szyIn7X1qfirfao1_1280.jpg
+Id of image :1145
+Image file written to stream...
+all items processed
+Total time taken to retrieve images from internet in an optimized way, process and send it back to user is10679 ms
+Closing WebApplicationContext for namespace 'appServlet-servlet': startup date [Mon Jul 15 16:50:38 IST 2019]; parent: Root WebApplicationContext
+Stopping beans in phase 2147483647
+Closing Root WebApplicationContext: startup date [Mon Jul 15 16:50:38 IST 2019]; root of context hierarchy
+Root WebApplicationContext: initialization started
+Refreshing Root WebApplicationContext: startup date [Mon Jul 15 16:54:52 IST 2019]; root of context hierarchy
+Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
+Unable to locate ThemeSource with name 'themeSource': using default [org.springframework.ui.context.support.ResourceBundleThemeSource@205555f4]
+Looking up JNDI object with name [java:comp/env/spring.liveBeansView.mbeanDomain]
+Converted JNDI name [java:comp/env/spring.liveBeansView.mbeanDomain] not found - trying original name [spring.liveBeansView.mbeanDomain]. javax.naming.NameNotFoundException: Name [spring.liveBeansView.mbeanDomain] is not bound in this Context. Unable to find [spring.liveBeansView.mbeanDomain].
+Looking up JNDI object with name [spring.liveBeansView.mbeanDomain]
+JNDI lookup for name [spring.liveBeansView.mbeanDomain] threw NamingException with message: Name [spring.liveBeansView.mbeanDomain] is not bound in this Context. Unable to find [spring.liveBeansView.mbeanDomain].. Returning null.
+Root WebApplicationContext: initialization completed in 328 ms
+FrameworkServlet 'appServlet': initialization started
+Looking up JNDI object with name [java:comp/env/spring.profiles.active]
+Converted JNDI name [java:comp/env/spring.profiles.active] not found - trying original name [spring.profiles.active]. javax.naming.NameNotFoundException: Name [spring.profiles.active] is not bound in this Context. Unable to find [spring.profiles.active].
+Looking up JNDI object with name [spring.profiles.active]
+JNDI lookup for name [spring.profiles.active] threw NamingException with message: Name [spring.profiles.active] is not bound in this Context. Unable to find [spring.profiles.active].. Returning null.
+Looking up JNDI object with name [java:comp/env/spring.profiles.default]
+Converted JNDI name [java:comp/env/spring.profiles.default] not found - trying original name [spring.profiles.default]. javax.naming.NameNotFoundException: Name [spring.profiles.default] is not bound in this Context. Unable to find [spring.profiles.default].
+Looking up JNDI object with name [spring.profiles.default]
+JNDI lookup for name [spring.profiles.default] threw NamingException with message: Name [spring.profiles.default] is not bound in this Context. Unable to find [spring.profiles.default].. Returning null.
+Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Mon Jul 15 16:54:52 IST 2019]; parent: Root WebApplicationContext
+Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]
+Overriding bean definition for bean 'mvcPathMatcher' with a different definition: replacing [Root bean: class [org.springframework.util.AntPathMatcher]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=mvcPathMatcher; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]]
+Overriding bean definition for bean 'mvcUrlPathHelper' with a different definition: replacing [Root bean: class [org.springframework.web.util.UrlPathHelper]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=mvcUrlPathHelper; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]]
+Overriding bean definition for bean 'mvcContentNegotiationManager' with a different definition: replacing [Root bean: class [org.springframework.web.accept.ContentNegotiationManagerFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=mvcContentNegotiationManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]]
+Overriding bean definition for bean 'mvcResourceUrlProvider' with a different definition: replacing [Root bean: class [org.springframework.web.servlet.resource.ResourceUrlProvider]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=mvcResourceUrlProvider; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]]
+Skipping bean definition for [BeanMethod:name=mvcUriComponentsContributor,declaringClass=org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport]: a definition for bean 'mvcUriComponentsContributor' already exists. This top-level bean definition is considered as an override.
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+Unable to locate ThemeSource with name 'themeSource': using default [org.springframework.ui.context.support.DelegatingThemeSource@279c34e6]
+Mapped "{[/images/retrieveImagesFromInternet],methods=[GET],produces=[application/zip]}" onto public void com.capgemini.imagespoc.controller.ImageController.getAllImagesFromInternet(java.lang.String,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+Mapped "{[/images/retrieveCountableImagesFromInternet/count/{countID}],methods=[GET],produces=[application/zip]}" onto public void com.capgemini.imagespoc.controller.ImageController.getRequiredImagesFromInternet(java.lang.String,int,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+Mapped "{[/images/retrieveImagesFromResource],methods=[GET],produces=[application/zip]}" onto public void com.capgemini.imagespoc.controller.ImageController.getAllImages(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+Mapped "{[/images/retrieveImagesfromInternetOptimized],methods=[GET],produces=[application/zip]}" onto public void com.capgemini.imagespoc.controller.ImageController.getAllImagesFromInternetOptimized(java.lang.String,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@57ac3434
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@247ae088
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@514b99c
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@3e6c0dc4
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Mon Jul 15 16:54:52 IST 2019]; parent: Root WebApplicationContext
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Mon Jul 15 16:54:52 IST 2019]; parent: Root WebApplicationContext
+Detected @ExceptionHandler methods in globalExceptionHandler
+Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@524fa19f
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@6d07dcbc
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@5d8d05c4
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@3e1af5aa
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@10539763
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@654c9b07
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@230398fb
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@5b36a313
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@395453a
+Creating JDK dynamic proxy: target source is org.springframework.plugin.core.support.AbstractTypeAwareSupport$BeansOfTypeTargetSource@265658e6
+Mapped "{[/images/retrieveImagesFromInternet],methods=[GET],produces=[application/zip]}" onto public void com.capgemini.imagespoc.controller.ImageController.getAllImagesFromInternet(java.lang.String,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+Mapped "{[/images/retrieveCountableImagesFromInternet/count/{countID}],methods=[GET],produces=[application/zip]}" onto public void com.capgemini.imagespoc.controller.ImageController.getRequiredImagesFromInternet(java.lang.String,int,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+Mapped "{[/images/retrieveImagesFromResource],methods=[GET],produces=[application/zip]}" onto public void com.capgemini.imagespoc.controller.ImageController.getAllImages(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+Mapped "{[/images/retrieveImagesfromInternetOptimized],methods=[GET],produces=[application/zip]}" onto public void com.capgemini.imagespoc.controller.ImageController.getAllImagesFromInternetOptimized(java.lang.String,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+Looking up JNDI object with name [java:comp/env/springfox.documentation.swagger.v1.path]
+Converted JNDI name [java:comp/env/springfox.documentation.swagger.v1.path] not found - trying original name [springfox.documentation.swagger.v1.path]. javax.naming.NameNotFoundException: Name [springfox.documentation.swagger.v1.path] is not bound in this Context. Unable to find [springfox.documentation.swagger.v1.path].
+Looking up JNDI object with name [springfox.documentation.swagger.v1.path]
+JNDI lookup for name [springfox.documentation.swagger.v1.path] threw NamingException with message: Name [springfox.documentation.swagger.v1.path] is not bound in this Context. Unable to find [springfox.documentation.swagger.v1.path].. Returning null.
+Looking up JNDI object with name [java:comp/env/springfox.documentation.swagger.v2.path]
+Converted JNDI name [java:comp/env/springfox.documentation.swagger.v2.path] not found - trying original name [springfox.documentation.swagger.v2.path]. javax.naming.NameNotFoundException: Name [springfox.documentation.swagger.v2.path] is not bound in this Context. Unable to find [springfox.documentation.swagger.v2.path].
+Looking up JNDI object with name [springfox.documentation.swagger.v2.path]
+JNDI lookup for name [springfox.documentation.swagger.v2.path] threw NamingException with message: Name [springfox.documentation.swagger.v2.path] is not bound in this Context. Unable to find [springfox.documentation.swagger.v2.path].. Returning null.
+Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Mon Jul 15 16:54:52 IST 2019]; parent: Root WebApplicationContext
+Detected @ExceptionHandler methods in globalExceptionHandler
+Looking up JNDI object with name [java:comp/env/springfox.documentation.swagger.v2.host]
+Converted JNDI name [java:comp/env/springfox.documentation.swagger.v2.host] not found - trying original name [springfox.documentation.swagger.v2.host]. javax.naming.NameNotFoundException: Name [springfox.documentation.swagger.v2.host] is not bound in this Context. Unable to find [springfox.documentation.swagger.v2.host].
+Looking up JNDI object with name [springfox.documentation.swagger.v2.host]
+JNDI lookup for name [springfox.documentation.swagger.v2.host] threw NamingException with message: Name [springfox.documentation.swagger.v2.host] is not bound in this Context. Unable to find [springfox.documentation.swagger.v2.host].. Returning null.
+initialising the handler methods
+Looking up JNDI object with name [java:comp/env/springfox.documentation.swagger.v2.path]
+Converted JNDI name [java:comp/env/springfox.documentation.swagger.v2.path] not found - trying original name [springfox.documentation.swagger.v2.path]. javax.naming.NameNotFoundException: Name [springfox.documentation.swagger.v2.path] is not bound in this Context. Unable to find [springfox.documentation.swagger.v2.path].
+Looking up JNDI object with name [springfox.documentation.swagger.v2.path]
+JNDI lookup for name [springfox.documentation.swagger.v2.path] threw NamingException with message: Name [springfox.documentation.swagger.v2.path] is not bound in this Context. Unable to find [springfox.documentation.swagger.v2.path].. Returning null.
+Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+Looking up JNDI object with name [java:comp/env/springfox.documentation.auto-startup]
+Converted JNDI name [java:comp/env/springfox.documentation.auto-startup] not found - trying original name [springfox.documentation.auto-startup]. javax.naming.NameNotFoundException: Name [springfox.documentation.auto-startup] is not bound in this Context. Unable to find [springfox.documentation.auto-startup].
+Looking up JNDI object with name [springfox.documentation.auto-startup]
+JNDI lookup for name [springfox.documentation.auto-startup] threw NamingException with message: Name [springfox.documentation.auto-startup] is not bound in this Context. Unable to find [springfox.documentation.auto-startup].. Returning null.
+Starting beans in phase 2147483647
+Looking up JNDI object with name [java:comp/env/springfox.documentation.auto-startup]
+Converted JNDI name [java:comp/env/springfox.documentation.auto-startup] not found - trying original name [springfox.documentation.auto-startup]. javax.naming.NameNotFoundException: Name [springfox.documentation.auto-startup] is not bound in this Context. Unable to find [springfox.documentation.auto-startup].
+Looking up JNDI object with name [springfox.documentation.auto-startup]
+JNDI lookup for name [springfox.documentation.auto-startup] threw NamingException with message: Name [springfox.documentation.auto-startup] is not bound in this Context. Unable to find [springfox.documentation.auto-startup].. Returning null.
+Context refreshed
+Found 1 custom documentation plugin(s)
+Total number of request handlers 14
+Adding key: [/images/retrieveCountableImagesFromInternet/count/{countID}], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveCountableImagesFromInternet/count/{countID}], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}}
+Adding key: [/images/retrieveCountableImagesFromInternet/count/{countID}], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveCountableImagesFromInternet/count/{countID}], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}}
+Adding key: [/images/retrieveImagesFromInternet], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveImagesFromInternet], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}}
+Adding key: [/images/retrieveImagesFromInternet], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveImagesFromInternet], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}}
+Adding key: [/images/retrieveImagesFromResource], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveImagesFromResource], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}}
+Adding key: [/images/retrieveImagesFromResource], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveImagesFromResource], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}}
+Adding key: [/images/retrieveImagesfromInternetOptimized], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveImagesfromInternetOptimized], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}}
+Adding key: [/images/retrieveImagesfromInternetOptimized], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveImagesfromInternetOptimized], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}}
+Adding key: [/swagger-resources/configuration/security], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/swagger-resources/configuration/security], supportedMethods=[], supportedMediaTypes=[], producibleMediaTypes=[]}}
+Adding key: [/swagger-resources/configuration/security], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/swagger-resources/configuration/security], supportedMethods=[], supportedMediaTypes=[], producibleMediaTypes=[]}}
+Adding key: [/swagger-resources/configuration/ui], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/swagger-resources/configuration/ui], supportedMethods=[], supportedMediaTypes=[], producibleMediaTypes=[]}}
+Adding key: [/swagger-resources/configuration/ui], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/swagger-resources/configuration/ui], supportedMethods=[], supportedMediaTypes=[], producibleMediaTypes=[]}}
+Adding key: [/swagger-resources], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/swagger-resources], supportedMethods=[], supportedMediaTypes=[], producibleMediaTypes=[]}}
+Adding key: [/swagger-resources], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/swagger-resources], supportedMethods=[], supportedMediaTypes=[], producibleMediaTypes=[]}}
+Combining WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveCountableImagesFromInternet/count/{countID}], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}} and WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveCountableImagesFromInternet/count/{countID}], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}}
+Combining WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveImagesFromInternet], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}} and WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveImagesFromInternet], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}}
+Combining WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveImagesFromResource], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}} and WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveImagesFromResource], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}}
+Combining WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveImagesfromInternetOptimized], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}} and WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/images/retrieveImagesfromInternetOptimized], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/zip]}}
+Combined number of request handlers 10
+Scanning for api listing references
+Adding return parameter of type V
+Reading parameters models for handlerMethod |getAllImages|
+Finished reading parameters models for handlerMethod |getAllImages|
+Reading parameters models for handlerMethod |getAllImages|
+Skipping model of type V as its either a container type, map, enum or base type, or its already been handled
+Did not find any parameter models for void
+Setting spring response class to: null
+Authorization count 0 for method getAllImages
+Adding return parameter of type V
+Reading parameters models for handlerMethod |getAllImagesFromInternet|
+Finished reading parameters models for handlerMethod |getAllImagesFromInternet|
+Reading parameters models for handlerMethod |getAllImagesFromInternet|
+Did not find any parameter models for void
+Setting spring response class to: null
+Authorization count 0 for method getAllImagesFromInternet
+Adding return parameter of type V
+Reading parameters models for handlerMethod |getAllImagesFromInternetOptimized|
+Finished reading parameters models for handlerMethod |getAllImagesFromInternetOptimized|
+Reading parameters models for handlerMethod |getAllImagesFromInternetOptimized|
+Did not find any parameter models for void
+Setting spring response class to: null
+Authorization count 0 for method getAllImagesFromInternetOptimized
+Adding return parameter of type V
+Reading parameters models for handlerMethod |getRequiredImagesFromInternet|
+Finished reading parameters models for handlerMethod |getRequiredImagesFromInternet|
+Reading parameters models for handlerMethod |getRequiredImagesFromInternet|
+Did not find any parameter models for void
+Setting spring response class to: null
+Authorization count 0 for method getRequiredImagesFromInternet
+Looking up JNDI object with name [java:comp/env/spring.liveBeansView.mbeanDomain]
+Converted JNDI name [java:comp/env/spring.liveBeansView.mbeanDomain] not found - trying original name [spring.liveBeansView.mbeanDomain]. javax.naming.NameNotFoundException: Name [spring.liveBeansView.mbeanDomain] is not bound in this Context. Unable to find [spring.liveBeansView.mbeanDomain].
+Looking up JNDI object with name [spring.liveBeansView.mbeanDomain]
+JNDI lookup for name [spring.liveBeansView.mbeanDomain] threw NamingException with message: Name [spring.liveBeansView.mbeanDomain] is not bound in this Context. Unable to find [spring.liveBeansView.mbeanDomain].. Returning null.
+FrameworkServlet 'appServlet': initialization completed in 5234 ms
+Looking up handler method for path /images/retrieveImagesfromInternetOptimized
+looking up handler for path: /images/retrieveImagesfromInternetOptimized
+Did not find handler method for [/images/retrieveImagesfromInternetOptimized]
+getAllImagesFromInternetOptimized
+Keyword passed in inputlaptop
+Image count based on keyword is16
+Number of Processors : 4
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mnh1jdFvHR1st5lhmo1_1280.jpg
+Id of image :6
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mnh2m1hnS81st5lhmo1_1280.jpg
+Id of image :10
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mnh0n9pHJW1st5lhmo1_1280.jpg
+Id of image :1
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mx3tpto69r1st5lhmo1_1280.jpg
+Id of image :183
+Image file written to stream...
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mnh1uhYnog1st5lhmo1_1280.jpg
+Id of image :7
+Image file written to stream...
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mopqkkwK2M1st5lhmo1_1280.jpg
+Id of image :30
+Image file written to stream...
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mnh121HEWa1st5lhmo1_1280.jpg
+Id of image :3
+Image file written to stream...
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mnh25vNOvI1st5lhmo1_1280.jpg
+Id of image :8
+Image file written to stream...
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mnh29fxz111st5lhmo1_1280.jpg
+Id of image :9
+Image file written to stream...
+Image file written to stream...
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mnh17lfd9R1st5lhmo1_1280.jpg
+Id of image :4
+Image file written to stream...
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mpp6tjdFhf1st5lhmo1_1280.jpg
+Id of image :41
+Image file written to stream...
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mtw7mhZsCe1st5lhmo1_1280.jpg
+Id of image :128
+Image file written to stream...
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mnh1d7s3UD1st5lhmo1_1280.jpg
+Id of image :5
+Image file written to stream...
+Image file written to stream...
+Image file written to stream...
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_myebwtELvb1st5lhmo1_1280.jpg
+Id of image :205
+Image file written to stream...
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_n7fgokF2Ul1st5lhmo1_1280.jpg
+Id of image :386
+Image file written to stream...
+Inside Invoke Image method...
+url of image :https://splashbase.s3.amazonaws.com/jaymantri/regular/tumblr_n98szyIn7X1qfirfao1_1280.jpg
+Id of image :1145
+Image file written to stream...
+all items processed
+Total time taken to retrieve images from internet in an optimized way, process and send it back to user is213282 ms
